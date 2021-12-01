@@ -1,46 +1,101 @@
+@mixin display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin btn($color, $length) {
+  background: $color;
+  border-radius: 5px;
+  border: none;
+  width: $length;
+  height: 30px;
+  color: #fff;
+  &:hover {
+    background: $color;
+  }
+}
+
+.flexNone {
+  flex: none;
+}
+
 body {
   margin: 0;
+  background: #f8f9fc;
 
-  #header {
-    .headerInner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: lightskyblue;
-
-      .login {
-        position: absolute;
-        right: 40px;
-      }
+  .container-fluid {
+    padding: 0;
+    #header {
+      border-bottom: 1px solid #e7eaf1;
+      background: #fff;
+      padding: 0 30px;
     }
-    nav {
-      ol {
-        display: flex;
+  }
+}
+/*********************************************************************
+
+header 디자인
+
+*********************************************************************/
+
+.headerInner {
+  @include display();
+  h1 {
+    margin-right: 50px;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+  nav {
+    ol {
+      @include display();
+      height: 50px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      line-height: 50px;
+
+      li {
+        height: 100%;
+        width: 100px;
         text-align: center;
-        align-items: center;
-        height: 60px;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        justify-content: center;
-        float: left;
-        height: 60px;
-        background: lightgray;
-
-        li {
-          width: 100px;
-          height: 100%;
-
-          a {
-            text-decoration: none;
-            color: black;
-            width: 100%;
-            height: 60px;
-            line-height: 60px;
-            display: block;
+        a {
+          text-decoration: none;
+          color: black;
+          width: 100%;
+          font-weight: bold;
+          font-size: 20px;
+          &:hover {
+            color: #01c3bc;
           }
+          // &::after { 클릭시 버튼 아래에 등장하도록
+          //   position: absolute;
+          //   background-color: #01C3BC;
+          //   content: '';
+          //   right: 6px;
+          //   bottom: -1px;
+          //   left: 6px;
+          //   height: 3px;
+          // }
         }
       }
     }
   }
+
+  .login {
+    margin-left: auto;
+    margin-right: 10px;
+    @include btn(#01c3bc, 70px);
+  }
+  .signIn {
+    @include btn(#ff7867, 80px);
+  }
 }
+
+/*********************************************************************
+
+list 디자인
+
+*********************************************************************/

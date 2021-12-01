@@ -1,56 +1,117 @@
+@charset "UTF-8";
+.flexNone {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+
 body {
   margin: 0;
+  background: #f8f9fc;
 }
 
-body #header .headerInner {
+body .container-fluid {
+  padding: 0;
+}
+
+body .container-fluid #header {
+  border-bottom: 1px solid #e7eaf1;
+  background: #fff;
+  padding: 0 30px;
+}
+
+/*********************************************************************
+
+header 디자인
+
+*********************************************************************/
+.headerInner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: lightskyblue;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-body #header .headerInner .login {
-  position: absolute;
-  right: 40px;
+.headerInner h1 {
+  margin-right: 50px;
 }
 
-body #header nav ol {
+.headerInner h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.headerInner nav ol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 60px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
   padding: 0;
   margin: 0;
   list-style: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  float: left;
-  height: 60px;
-  background: lightgray;
+  line-height: 50px;
 }
 
-body #header nav ol li {
-  width: 100px;
+.headerInner nav ol li {
   height: 100%;
+  width: 100px;
+  text-align: center;
 }
 
-body #header nav ol li a {
+.headerInner nav ol li a {
   text-decoration: none;
   color: black;
   width: 100%;
-  height: 60px;
-  line-height: 60px;
-  display: block;
+  font-weight: bold;
+  font-size: 20px;
 }
+
+.headerInner nav ol li a:hover {
+  color: #01c3bc;
+}
+
+.headerInner .login {
+  margin-left: auto;
+  margin-right: 10px;
+  background: #01c3bc;
+  border-radius: 5px;
+  border: none;
+  width: 70px;
+  height: 30px;
+  color: #fff;
+}
+
+.headerInner .login:hover {
+  background: #01c3bc;
+}
+
+.headerInner .signIn {
+  background: #ff7867;
+  border-radius: 5px;
+  border: none;
+  width: 80px;
+  height: 30px;
+  color: #fff;
+}
+
+.headerInner .signIn:hover {
+  background: #ff7867;
+}
+
+/*********************************************************************
+
+list 디자인
+
+*********************************************************************/
 /*# sourceMappingURL=list.css.map */
