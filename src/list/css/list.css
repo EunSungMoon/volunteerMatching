@@ -17,7 +17,8 @@ body .container-fluid {
 body .container-fluid #header {
   border-bottom: 1px solid #e7eaf1;
   background: #fff;
-  padding: 0 30px;
+  padding: 13px 30px 0;
+  height: 80px;
 }
 
 /*********************************************************************
@@ -32,9 +33,11 @@ header 디자인
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .headerInner h1 {
@@ -81,8 +84,20 @@ header 디자인
   color: #01c3bc;
 }
 
-.headerInner .login {
+.headerInner .btnWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-left: auto;
+}
+
+.headerInner .btnWrap .login {
   margin-right: 10px;
   background: #01c3bc;
   border-radius: 5px;
@@ -92,11 +107,11 @@ header 디자인
   color: #fff;
 }
 
-.headerInner .login:hover {
-  background: #01c3bc;
+.headerInner .btnWrap .login:hover {
+  background: #00afa9;
 }
 
-.headerInner .signIn {
+.headerInner .btnWrap .signIn {
   background: #ff7867;
   border-radius: 5px;
   border: none;
@@ -105,8 +120,8 @@ header 디자인
   color: #fff;
 }
 
-.headerInner .signIn:hover {
-  background: #ff7867;
+.headerInner .btnWrap .signIn:hover {
+  background: #ff6d5a;
 }
 
 /*********************************************************************
@@ -114,13 +129,41 @@ header 디자인
 list 디자인
 
 *********************************************************************/
+#main {
+  margin-top: 50px;
+}
+
+#main .h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#main section ol {
+  list-style: none;
+  padding: 0;
+}
+
+#main section ol li {
+  width: 630px;
+  display: inline-block;
+  border: 1px solid;
+}
+
 /*********************************************************************
 
 모달 디자인
 
 *********************************************************************/
 .open {
-  display: block !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modalForm {
@@ -135,8 +178,8 @@ list 디자인
 }
 
 .modalForm .modalContent {
-  width: 500px;
-  height: 600px;
+  width: 360px;
+  height: 430px;
   background-color: #fff;
   border-radius: 5px;
   position: relative;
@@ -144,36 +187,116 @@ list 디자인
           box-shadow: 0 5px 20px;
   -webkit-transition: margin 0.2s ease-out;
   transition: margin 0.2s ease-out;
-  margin: 60px auto 0;
+  padding: 24px;
 }
 
-.modalForm .title {
+.modalForm .modalContent .closeBtn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 1px solid;
-  padding: 0 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: #fff;
+  font-size: 20px;
+  margin-left: auto;
 }
 
-.modalForm .title h1 {
-  width: 460px;
+.modalForm .modalContent .closeBtn:hover {
+  background: #e7ebed;
+  border-radius: 5px;
+}
+
+.modalForm .modalContent .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 10px;
+  margin-bottom: 15px;
+}
+
+.modalForm .modalContent .title h1 {
   margin: 0;
   height: 58px;
   line-height: 58px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.modalForm .title .closeBtn {
-  margin-top: 20px;
-  width: 20px;
-  height: 20px;
-  border: none;
-  background: #fff;
-  font-size: 13px;
-}
-
-.modalForm .title .closeBtn:hover {
-  background: gray;
+.modalForm .modalContent .button {
+  width: 312px;
+  height: 48px;
+  margin-bottom: 12px;
   border-radius: 5px;
+}
+
+.modalForm .modalContent .login-input {
+  border: 1px solid #f4f4f5;
+  background-color: #f4f4f5;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.modalForm .modalContent .login-input:focus {
+  outline: 2px solid #01c3bc;
+}
+
+.modalForm .modalContent .login-input:-webkit-autofill {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.modalForm .modalContent .login-btn {
+  background-color: #01c3bc;
   color: #fff;
+  border: none;
+}
+
+.modalForm .modalContent .login-btn:hover {
+  background: #00afa9;
+}
+
+.modalForm .modalContent .signin {
+  border-top: 1px solid #e7e8ea;
+  position: relative;
+  margin-top: 14px;
+  padding-top: 22px;
+}
+
+.modalForm .modalContent .signin .signing-text {
+  position: absolute;
+  top: -14px;
+  left: 3%;
+  padding: 0 4px;
+  background: #fff;
+  font-size: 14px;
+  line-height: 14px;
+  color: #9fa4ab;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+}
+
+.modalForm .modalContent .signin .signin-btn {
+  border: 2px solid #01c3bc;
+  background: #fff;
+  color: #01c3bc;
+}
+
+.modalForm .modalContent .signin .signin-btn:hover {
+  background-color: #e7ebed;
+  border: 2px solid #00afa9;
+  color: #00afa9;
 }
 /*# sourceMappingURL=list.css.map */

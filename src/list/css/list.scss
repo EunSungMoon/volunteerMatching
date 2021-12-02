@@ -1,10 +1,10 @@
-@mixin display {
+@mixin display($effect) {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: $effect;
 }
 
-@mixin btn($color, $length) {
+@mixin btn($color, $length, $hover-color) {
   background: $color;
   border-radius: 5px;
   border: none;
@@ -12,7 +12,7 @@
   height: 30px;
   color: #fff;
   &:hover {
-    background: $color;
+    background: $hover-color;
   }
 }
 
@@ -29,7 +29,8 @@ body {
     #header {
       border-bottom: 1px solid #e7eaf1;
       background: #fff;
-      padding: 0 30px;
+      padding: 13px 30px 0;
+      height: 80px;
     }
   }
 }
@@ -40,7 +41,8 @@ header 디자인
 *********************************************************************/
 
 .headerInner {
-  @include display();
+  @include display(center);
+  flex-wrap: wrap;
   h1 {
     margin-right: 50px;
     a {
@@ -50,7 +52,7 @@ header 디자인
   }
   nav {
     ol {
-      @include display();
+      @include display(space-between);
       height: 50px;
       padding: 0;
       margin: 0;
@@ -70,27 +72,21 @@ header 디자인
           &:hover {
             color: #01c3bc;
           }
-          // &::after { 클릭시 버튼 아래에 등장하도록
-          //   position: absolute;
-          //   background-color: #01C3BC;
-          //   content: '';
-          //   right: 6px;
-          //   bottom: -1px;
-          //   left: 6px;
-          //   height: 3px;
-          // }
         }
       }
     }
   }
 
-  .login {
+  .btnWrap {
+    @include display(space-between);
     margin-left: auto;
-    margin-right: 10px;
-    @include btn(#01c3bc, 70px);
-  }
-  .signIn {
-    @include btn(#ff7867, 80px);
+    .login {
+      margin-right: 10px;
+      @include btn(#01c3bc, 70px, #00afa9);
+    }
+    .signIn {
+      @include btn(#ff7867, 80px, #ff6d5a);
+    }
   }
 }
 
@@ -99,6 +95,27 @@ header 디자인
 list 디자인
 
 *********************************************************************/
+#main {
+  margin-top: 50px;
+  .h2 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  section {
+    ol {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        width: 630px;
+        display: inline-block;
+        border: 1px solid;
+      }
+    }
+  }
+  
+}
 
 /*********************************************************************
 
@@ -106,7 +123,9 @@ list 디자인
 
 *********************************************************************/
 .open {
-  display: block !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
 
 .modalForm {
@@ -118,40 +137,101 @@ list 디자인
   left: 0;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.5);
+
   .modalContent {
-    width: 500px;
-    height: 600px;
+    width: 360px;
+    height: 430px;
     background-color: #fff;
     border-radius: 5px;
     position: relative;
     box-shadow: 0 5px 20px;
     transition: margin 0.2s ease-out;
-    margin: 60px auto 0;
-  }
-  .title {
-    display: flex;
-    border-bottom: 1px solid;
-    padding: 0 10px;
+    padding: 24px;
 
-    h1 {
-      width: 460px;
-      margin: 0;
-      height: 58px;
-      line-height: 58px;
-    }
     .closeBtn {
-      margin-top: 20px;
-      width: 20px;
-      height: 20px;
+      @include display(center);
+      width: 30px;
+      height: 30px;
       border: none;
       background: #fff;
-      font-size: 13px;
+      font-size: 20px;
+      margin-left: auto;
 
       &:hover {
-        background: gray;
+        background: #e7ebed;
         border-radius: 5px;
-        color: #fff;
+      }
+    }
+    .title {
+      @include display(center);
+      padding: 0 10px;
+      margin-bottom: 15px;
+
+      h1 {
+        margin: 0;
+        height: 58px;
+        line-height: 58px;
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
+    .button {
+      width: 312px;
+      height: 48px;
+      margin-bottom: 12px;
+      border-radius: 5px;
+    }
+    .login-input {
+      border: 1px solid #f4f4f5;
+      background-color: #f4f4f5;
+      padding: 0 16px;
+      font-size: 14px;
+
+      &:focus {
+        outline: 2px solid #01c3bc;
+      }
+      &:-webkit-autofill {
+        transition: background-color 5000s ease-in-out 0s;
+      }
+    }
+
+    .login-btn {
+      background-color: #01c3bc;
+      color: #fff;
+      border: none;
+      &:hover {
+        background: #00afa9;
+      }
+    }
+    .signin {
+      border-top: 1px solid #e7e8ea;
+      position: relative;
+      margin-top: 14px;
+      padding-top: 22px;
+      .signing-text {
+        position: absolute;
+        top: -14px;
+        left: 3%;
+        padding: 0 4px;
+        background: #fff;
+        font-size: 14px;
+        line-height: 14px;
+        color: #9fa4ab;
+        transform: translate(50%, 50%);
+      }
+      .signin-btn {
+        border: 2px solid #01c3bc;
+        background: #fff;
+        color: #01c3bc;
+
+        &:hover {
+          background-color: #e7ebed;
+          border: 2px solid #00afa9;
+          color: #00afa9;
+        }
       }
     }
   }
 }
+
+//에러메세지 컬러 #e93c3c
