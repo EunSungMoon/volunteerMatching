@@ -138,15 +138,47 @@ list 디자인
   text-align: center;
 }
 
-#main section ol {
+#main section .contentWrap {
   list-style: none;
   padding: 0;
 }
 
-#main section ol li {
-  width: 630px;
-  display: inline-block;
-  border: 1px solid;
+#main section .contentWrap li {
+  width: 628px;
+  border: none;
+  border-radius: 16px;
+  margin: 10px;
+  background: #fff;
+  -webkit-box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+}
+
+#main section .contentWrap li:hover {
+  -webkit-transform: translate(-4px);
+          transform: translate(-4px);
+}
+
+#main section .contentWrap li .listContent {
+  padding: 20px 10px;
+}
+
+#main section .contentWrap li .listContent span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#main section .contentWrap li .listContent p {
+  margin: 0;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1400px) {
+  .contentWrap {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 /*********************************************************************

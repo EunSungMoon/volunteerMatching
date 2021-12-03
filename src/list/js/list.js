@@ -10,7 +10,7 @@ export default {
       <div class = "container">
       <h2 class = "h2">게시판</h2>
         <section class = "container">
-          <ol class = "contentWrap"></ol>
+          <ol class = "contentWrap row"></ol>
         </section>
       </div>
     `
@@ -19,7 +19,7 @@ export default {
 
   listTemplate() {
     let template = `
-      <li class="container">
+      <li class="=col-6">
         <div class = "listContent">
           <a>
             <span>제목 : 강남요양병원 봉사자 모집</span>
@@ -29,7 +29,7 @@ export default {
           </a>
         </div>
       </li>
-      <li class="container">
+      <li class="col-6">
       <div class = "listContent">
         <a>
           <span>제목 : 강남요양병원 봉사자 모집</span>
@@ -39,7 +39,7 @@ export default {
         </a>
       </div>
     </li>
-    <li class="container">
+    <li class="col-6">
         <div class = "listContent">
           <a>
             <span>제목 : 강남요양병원 봉사자 모집</span>

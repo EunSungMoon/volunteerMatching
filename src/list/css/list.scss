@@ -103,18 +103,43 @@ list 디자인
   }
 
   section {
-    ol {
+    .contentWrap {
       list-style: none;
       padding: 0;
-  
+
       li {
-        width: 630px;
-        display: inline-block;
-        border: 1px solid;
+        width: 628px;
+        border: none;
+        // 2px solid #c6c7c9;
+        border-radius: 16px;
+        margin: 10px;
+        background: #fff;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out,-moz-transform .2s ease-in-out;
+        &:hover{
+          transform: translate(-4px);
+        }
+
+        .listContent {
+          padding: 20px 10px;
+
+          span {
+            font-size: 20px;
+            font-weight: bold;
+          }
+          p{
+            margin: 0;
+            font-size: 15px;
+          }
+        }
       }
     }
   }
-  
+}
+@media screen and (max-width: 1400px) {
+  .contentWrap {
+    justify-content: center;
+  }
 }
 
 /*********************************************************************
