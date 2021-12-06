@@ -14,20 +14,20 @@ export default {
 
   modalTemplate() {
     let template = `
-      <section class = "modalForm">
-        <div class = "modalContent">
+      <section class = "loginTemplate modalForm">
+        <div class = "modalContent loginModal">
           <button type = "button" class = "closeBtn">X</button>
           <div class = "title">
             <h1>프렌즈</h1>
-        </div>
+          </div>
           <form>
-            <input name = "id" type = "text" class = "button login-input" placeholder = "아이디를 입력해주세요.">
-            <input name = "password" type = "text" class = "button login-input" placeholder = "비밀번호를 입력해주세요.">          
+            <input name = "id" type = "text" class = "long-btn text-input" placeholder = "아이디를 입력해주세요.">
+            <input name = "password" type = "text" class = "long-btn text-input" placeholder = "비밀번호를 입력해주세요.">          
           </form>
-          <button class = "button login-btn">로그인</button>
+          <button class = "long-btn green-btn">로그인</button>
           <div class = "signin">
             <span class = "signing-text">프렌즈가 처음이세요?</span>
-            <button class = "button signin-btn">회원가입</button>
+            <button class = "long-btn signin-btn">회원가입</button>
           </div>
         </div>
       </section>
@@ -36,11 +36,11 @@ export default {
   },
 
   addClass() {
-    sel.el('.modalForm').classList.add('open');
+    sel.el('.loginTemplate').classList.add('open');
   },
 
   removeClass() {
-    sel.el('.modalForm').classList.remove('open')
+    sel.el('.loginTemplate').classList.remove('open')
   },
 
   btnEvent(buttonClass, funcName) {
@@ -49,7 +49,7 @@ export default {
 
   escEvent() {
     window.addEventListener('keyup', e => {
-      if(sel.el('.modalForm').classList.contains('open') && e.key==='Escape') {
+      if(sel.el('.loginTemplate').classList.contains('open') && e.key==='Escape') {
         this.removeClass()
       }
     })

@@ -136,12 +136,12 @@ list 디자인
           }
           .apply-state {
             border-radius: 5px;
-            width: 80px;
+            width: 90px;
             height: 32px;
             line-height: 32px;
             text-align: center;
             margin-top: 5px;
-            margin-left: 86%;
+            margin-left: 85%;
             color: #fff;
             font-weight: bold;
             font-size: 17px;
@@ -165,9 +165,9 @@ list 디자인
     justify-content: center;
   }
 }
-@media screen and (max-width : 768px) {
+@media screen and (max-width: 768px) {
   .apply-state {
-    margin-left: 84% !important;
+    margin-left: 82% !important;
   }
 }
 
@@ -193,8 +193,6 @@ list 디자인
   background-color: rgba(0, 0, 0, 0.5);
 
   .modalContent {
-    width: 360px;
-    height: 430px;
     background-color: #fff;
     border-radius: 5px;
     position: relative;
@@ -210,7 +208,7 @@ list 디자인
       background: #fff;
       font-size: 20px;
       margin-left: auto;
-
+  
       &:hover {
         background: #e7ebed;
         border-radius: 5px;
@@ -220,7 +218,7 @@ list 디자인
       @include display(center);
       padding: 0 10px;
       margin-bottom: 15px;
-
+  
       h1 {
         margin: 0;
         height: 58px;
@@ -229,18 +227,19 @@ list 디자인
         font-weight: bold;
       }
     }
-    .button {
+
+    .long-btn {
       width: 312px;
       height: 48px;
       margin-bottom: 12px;
       border-radius: 5px;
     }
-    .login-input {
+    .text-input {
       border: 1px solid #f4f4f5;
       background-color: #f4f4f5;
       padding: 0 16px;
       font-size: 14px;
-
+  
       &:focus {
         outline: 2px solid #01c3bc;
       }
@@ -249,7 +248,7 @@ list 디자인
       }
     }
 
-    .login-btn {
+    .green-btn {
       background-color: #01c3bc;
       color: #fff;
       border: none;
@@ -257,35 +256,66 @@ list 디자인
         background: #00afa9;
       }
     }
-    .signin {
-      border-top: 1px solid #e7e8ea;
-      position: relative;
-      margin-top: 14px;
-      padding-top: 22px;
-      .signing-text {
-        position: absolute;
-        top: -14px;
-        left: 3%;
-        padding: 0 4px;
-        background: #fff;
-        font-size: 14px;
-        line-height: 14px;
-        color: #9fa4ab;
-        transform: translate(50%, 50%);
-      }
-      .signin-btn {
-        border: 2px solid #01c3bc;
-        background: #fff;
-        color: #01c3bc;
+  }
+}
 
-        &:hover {
-          background-color: #e7ebed;
-          border: 2px solid #00afa9;
-          color: #00afa9;
-        }
+/*********************************************************************
+
+로그인 디자인
+
+*********************************************************************/
+.loginModal {
+  width: 360px;
+  height: 430px;
+  .signin {
+    border-top: 1px solid #e7e8ea;
+    position: relative;
+    margin-top: 14px;
+    padding-top: 22px;
+    .signing-text {
+      position: absolute;
+      top: -14px;
+      left: 3%;
+      padding: 0 4px;
+      background: #fff;
+      font-size: 14px;
+      line-height: 14px;
+      color: #9fa4ab;
+      transform: translate(50%, 50%);
+    }
+    .signin-btn {
+      border: 2px solid #01c3bc;
+      background: #fff;
+      color: #01c3bc;
+
+      &:hover {
+        background-color: #e7ebed;
+        border: 2px solid #00afa9;
+        color: #00afa9;
       }
     }
   }
 }
 
-//에러메세지 컬러 #e93c3c
+/*********************************************************************
+
+회원가입 디자인
+
+*********************************************************************/
+.signinModal{
+  width: 360px;
+  height: 380px;
+
+  .email-text {
+    font-size: 14px;
+    padding-left: 3px;
+    margin-bottom: 5px;
+    color: #767676;
+  }
+  .agree-text {
+    font-size: 12px;
+    text-align: center;
+    color: #767676;
+    margin-top: 5px;
+  }
+}

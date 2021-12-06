@@ -6,7 +6,6 @@ export default {
     this.event()
   },
   event() {
-    this.loginEvent('.signIn', 'signIn');
     this.loginEvent('.title', 'list')
   },
 

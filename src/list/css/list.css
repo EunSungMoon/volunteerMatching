@@ -186,12 +186,12 @@ list 디자인
 
 #main .contentWrap li .listContent a .apply-state {
   border-radius: 5px;
-  width: 80px;
+  width: 90px;
   height: 32px;
   line-height: 32px;
   text-align: center;
   margin-top: 5px;
-  margin-left: 86%;
+  margin-left: 85%;
   color: #fff;
   font-weight: bold;
   font-size: 17px;
@@ -215,7 +215,7 @@ list 디자인
 
 @media screen and (max-width: 768px) {
   .apply-state {
-    margin-left: 84% !important;
+    margin-left: 82% !important;
   }
 }
 
@@ -248,8 +248,6 @@ list 디자인
 }
 
 .modalForm .modalContent {
-  width: 360px;
-  height: 430px;
   background-color: #fff;
   border-radius: 5px;
   position: relative;
@@ -305,47 +303,57 @@ list 디자인
   font-weight: bold;
 }
 
-.modalForm .modalContent .button {
+.modalForm .modalContent .long-btn {
   width: 312px;
   height: 48px;
   margin-bottom: 12px;
   border-radius: 5px;
 }
 
-.modalForm .modalContent .login-input {
+.modalForm .modalContent .text-input {
   border: 1px solid #f4f4f5;
   background-color: #f4f4f5;
   padding: 0 16px;
   font-size: 14px;
 }
 
-.modalForm .modalContent .login-input:focus {
+.modalForm .modalContent .text-input:focus {
   outline: 2px solid #01c3bc;
 }
 
-.modalForm .modalContent .login-input:-webkit-autofill {
+.modalForm .modalContent .text-input:-webkit-autofill {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.modalForm .modalContent .login-btn {
+.modalForm .modalContent .green-btn {
   background-color: #01c3bc;
   color: #fff;
   border: none;
 }
 
-.modalForm .modalContent .login-btn:hover {
+.modalForm .modalContent .green-btn:hover {
   background: #00afa9;
 }
 
-.modalForm .modalContent .signin {
+/*********************************************************************
+
+로그인 디자인
+
+*********************************************************************/
+.loginModal {
+  width: 360px;
+  height: 430px;
+}
+
+.loginModal .signin {
   border-top: 1px solid #e7e8ea;
   position: relative;
   margin-top: 14px;
   padding-top: 22px;
 }
 
-.modalForm .modalContent .signin .signing-text {
+.loginModal .signin .signing-text {
   position: absolute;
   top: -14px;
   left: 3%;
@@ -358,15 +366,39 @@ list 디자인
           transform: translate(50%, 50%);
 }
 
-.modalForm .modalContent .signin .signin-btn {
+.loginModal .signin .signin-btn {
   border: 2px solid #01c3bc;
   background: #fff;
   color: #01c3bc;
 }
 
-.modalForm .modalContent .signin .signin-btn:hover {
+.loginModal .signin .signin-btn:hover {
   background-color: #e7ebed;
   border: 2px solid #00afa9;
   color: #00afa9;
+}
+
+/*********************************************************************
+
+회원가입 디자인
+
+*********************************************************************/
+.signinModal {
+  width: 360px;
+  height: 380px;
+}
+
+.signinModal .email-text {
+  font-size: 14px;
+  padding-left: 3px;
+  margin-bottom: 5px;
+  color: #767676;
+}
+
+.signinModal .agree-text {
+  font-size: 12px;
+  text-align: center;
+  color: #767676;
+  margin-top: 5px;
 }
 /*# sourceMappingURL=list.css.map */

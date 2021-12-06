@@ -1,6 +1,9 @@
 import Header from "./list/js/header.js"
+import Login from "./list/js/login.js"
+import Signin from "./list/js/signin.js"
 
 document.addEventListener('DOMContentLoaded', function() {
   Header.init()
-  console.log("회원가입 화면입니다");
+  Login.init()
+  Signin.init()
 })
