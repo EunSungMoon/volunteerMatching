@@ -136,14 +136,15 @@ list 디자인
 #main .h2 {
   margin-bottom: 30px;
   text-align: center;
+  font-weight: bold;
 }
 
-#main section .contentWrap {
+#main .contentWrap {
   list-style: none;
   padding: 0;
 }
 
-#main section .contentWrap li {
+#main .contentWrap li {
   width: 628px;
   border: none;
   border-radius: 16px;
@@ -151,26 +152,57 @@ list 디자인
   background: #fff;
   -webkit-box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
           box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-  transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
-#main section .contentWrap li:hover {
-  -webkit-transform: translate(-4px);
-          transform: translate(-4px);
+#main .contentWrap li:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
 }
 
-#main section .contentWrap li .listContent {
+#main .contentWrap li .listContent {
   padding: 20px 10px;
 }
 
-#main section .contentWrap li .listContent span {
-  font-size: 20px;
-  font-weight: bold;
+#main .contentWrap li .listContent a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-#main section .contentWrap li .listContent p {
+#main .contentWrap li .listContent a span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#main .contentWrap li .listContent a p {
   margin: 0;
   font-size: 15px;
+}
+
+#main .contentWrap li .listContent a .apply-state {
+  border-radius: 5px;
+  width: 80px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 86%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.apply-ing {
+  background: #01c3bc;
+}
+
+.apply-complete {
+  background: #6c757d;
 }
 
 @media screen and (max-width: 1400px) {
@@ -178,6 +210,12 @@ list 디자인
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .apply-state {
+    margin-left: 84% !important;
   }
 }
 

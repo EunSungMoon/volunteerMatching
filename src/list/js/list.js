@@ -22,30 +22,33 @@ export default {
       <li class="=col-6">
         <div class = "listContent">
           <a>
-            <span>제목 : 강남요양병원 봉사자 모집</span>
+            <span>강남요양병원 봉사자 모집</span>
             <p>분야 : 미용봉사 (커트)</p>
             <p>인원수 : 1명</p>
             <p>주소 : 서울시 강남구 개포동 123번지</p>
+            <p class = "apply-state apply-ing">모집중</p>
           </a>
         </div>
       </li>
       <li class="col-6">
       <div class = "listContent">
         <a>
-          <span>제목 : 강남요양병원 봉사자 모집</span>
+          <span>강남요양병원 봉사자 모집</span>
           <p>분야 : 미용봉사 (커트)</p>
           <p>인원수 : 1명</p>
           <p>주소 : 서울시 강남구 개포동 123번지</p>
+          <p class = "apply-state apply-complete">모집완료</p>
         </a>
       </div>
     </li>
     <li class="col-6">
         <div class = "listContent">
           <a>
-            <span>제목 : 강남요양병원 봉사자 모집</span>
+            <span>강남요양병원 봉사자 모집</span>
             <p>분야 : 미용봉사 (커트)</p>
             <p>인원수 : 1명</p>
             <p>주소 : 서울시 강남구 개포동 123번지</p>
+            <p class = "apply-state apply-ing">모집 중</p>
           </a>
         </div>
       </li>
