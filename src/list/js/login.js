@@ -10,6 +10,7 @@ export default {
     this.btnEvent('.login', this.addClass)
     this.btnEvent('.closeBtn', this.removeClass)
     this.escEvent()
+    this.moveToSingn()
   },
 
   modalTemplate() {
@@ -53,5 +54,11 @@ export default {
         this.removeClass()
       }
     })
+  },
+
+  moveToSingn() {
+    this.btnEvent('.signin-btn', this.removeClass)
+    // sel.el('.signinTemplate').classList.add('open')
+    console.log(sel.el('.signinTemplate'));
   }
 }
