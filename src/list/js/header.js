@@ -7,6 +7,7 @@ export default {
   },
   event() {
     this.loginEvent('.title', 'list')
+    this.loginEvent('.title', 'list')
   },
 
   headerTemplate() {
@@ -15,7 +16,7 @@ export default {
       <h1 class = "title flexNone"><a href = "#">프렌즈</a></h1>
       <nav>
         <ol class = "flexNone">
-          <li><a href = "">게시판</a></li>
+          <li ><a href = "list.html">게시판</a></li>
           <li><a href = "">채팅</a></li>
           <li><a href = "">프로필</a></li>
         </ol>

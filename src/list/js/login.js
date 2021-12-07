@@ -32,7 +32,7 @@ export default {
         </div>
       </section>
     `
-    sel.el('#main').insertAdjacentHTML('afterend', template)
+    sel.el('#footer').insertAdjacentHTML('afterend', template)
   },
 
   addClass() {

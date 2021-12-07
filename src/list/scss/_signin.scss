@@ -1,0 +1,29 @@
+/*********************************************************************
+
+회원가입 페이지 디자인
+
+*********************************************************************/
+#signIn-main {
+  margin-top: 50px;
+  .h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  section {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 7px;
+
+    form { 
+      margin: 0 auto;
+    }
+
+    button {
+      margin: 0 auto;
+    }
+  }
+}

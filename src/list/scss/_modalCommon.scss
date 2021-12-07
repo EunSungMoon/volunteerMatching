@@ -1,0 +1,87 @@
+/*********************************************************************
+
+모달 디자인
+
+*********************************************************************/
+.open {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalForm {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .modalContent {
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 5px 20px;
+    transition: margin 0.2s ease-out;
+    padding: 24px;
+
+    .closeBtn {
+      @include display(center);
+      width: 30px;
+      height: 30px;
+      border: none;
+      background: #fff;
+      font-size: 20px;
+      margin-left: auto;
+  
+      &:hover {
+        background: #e7ebed;
+        border-radius: 5px;
+      }
+    }
+    .title {
+      @include display(center);
+      padding: 0 10px;
+      margin-bottom: 15px;
+  
+      h1 {
+        margin: 0;
+        height: 58px;
+        line-height: 58px;
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
+
+    .long-btn {
+      width: 312px;
+      height: 48px;
+      margin-bottom: 12px;
+      border-radius: 5px;
+    }
+    .text-input {
+      border: 1px solid #f4f4f5;
+      background-color: #f4f4f5;
+      padding: 0 16px;
+      font-size: 14px;
+  
+      &:focus {
+        outline: 2px solid #01c3bc;
+      }
+      &:-webkit-autofill {
+        transition: background-color 5000s ease-in-out 0s;
+      }
+    }
+
+    .green-btn {
+      background-color: #01c3bc;
+      color: #fff;
+      border: none;
+      &:hover {
+        background: #00afa9;
+      }
+    }
+  }
+}

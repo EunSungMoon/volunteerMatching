@@ -1,0 +1,61 @@
+@import 'modalCommon';
+/*********************************************************************
+
+로그인 디자인
+
+*********************************************************************/
+.loginModal {
+  width: 360px;
+  height: 430px;
+  .signin {
+    border-top: 1px solid #e7e8ea;
+    position: relative;
+    margin-top: 14px;
+    padding-top: 22px;
+    .signing-text {
+      position: absolute;
+      top: -14px;
+      left: 3%;
+      padding: 0 4px;
+      background: #fff;
+      font-size: 14px;
+      line-height: 14px;
+      color: #9fa4ab;
+      transform: translate(50%, 50%);
+    }
+    .signin-btn {
+      border: 2px solid #01c3bc;
+      background: #fff;
+      color: #01c3bc;
+
+      &:hover {
+        background-color: #e7ebed;
+        border: 2px solid #00afa9;
+        color: #00afa9;
+      }
+    }
+  }
+}
+
+/*********************************************************************
+
+회원가입 디자인
+
+*********************************************************************/
+.signinModal{
+  width: 360px;
+  height: 380px;
+
+  .email-text {
+    font-size: 14px;
+    padding-left: 3px;
+    margin-bottom: 5px;
+    color: #767676;
+  }
+  .agree-text {
+    font-size: 12px;
+    text-align: center;
+    color: #767676;
+    margin-top: 5px;
+  }
+}

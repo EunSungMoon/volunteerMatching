@@ -1,0 +1,55 @@
+/*********************************************************************
+
+header 디자인
+
+*********************************************************************/
+
+.headerInner {
+  @include display(center);
+  flex-wrap: wrap;
+  h1 {
+    margin-right: 50px;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+  nav {
+    ol {
+      @include display(space-between);
+      height: 50px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      line-height: 50px;
+
+      li {
+        height: 100%;
+        width: 100px;
+        text-align: center;
+        a {
+          text-decoration: none;
+          color: black;
+          width: 100%;
+          font-weight: bold;
+          font-size: 20px;
+          &:hover {
+            color: #01c3bc;
+          }
+        }
+      }
+    }
+  }
+
+  .btnWrap {
+    @include display(space-between);
+    margin-left: auto;
+    .login {
+      margin-right: 10px;
+      @include btn(#01c3bc, 70px, #00afa9);
+    }
+    .signIn {
+      @include btn(#ff7867, 80px, #ff6d5a);
+    }
+  }
+}
