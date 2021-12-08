@@ -11,6 +11,7 @@ export default {
     this.btnEvent('.closeBtn', this.removeClass)
     this.escEvent()
     this.moveToSingn()
+    this.loginBtnEvt()
   },
 
   modalTemplate() {
@@ -25,7 +26,7 @@ export default {
             <input name = "id" type = "text" class = "long-btn text-input" placeholder = "아이디를 입력해주세요.">
             <input name = "password" type = "text" class = "long-btn text-input" placeholder = "비밀번호를 입력해주세요.">          
           </form>
-          <button class = "long-btn green-btn">로그인</button>
+          <button class = "long-btn green-btn login-btn">로그인</button>
           <div class = "signin">
             <span class = "signing-text">프렌즈가 처음이세요?</span>
             <button class = "long-btn signin-btn">회원가입</button>
@@ -50,15 +51,26 @@ export default {
 
   escEvent() {
     window.addEventListener('keyup', e => {
-      if(sel.el('.loginTemplate').classList.contains('open') && e.key==='Escape') {
+      if (sel.el('.loginTemplate').classList.contains('open') && e.key === 'Escape') {
         this.removeClass()
       }
     })
   },
 
+  inputNullCheck() {
+    if (!sel.el('input[name="id"]').value || !sel.el('input[name ="password"]').value) {
+      alert('이메일 또는 비밀번호를 다시 한번 확인해주세요.')
+    }
+  },
+
+  loginBtnEvt() {
+    sel.el('.login-btn').addEventListener('click', this.inputNullCheck)
+  },
+
   moveToSingn() {
-    this.btnEvent('.signin-btn', this.removeClass)
-    // sel.el('.signinTemplate').classList.add('open')
-    console.log(sel.el('.signinTemplate'));
+    sel.el('.signin-btn').addEventListener('click', function () {
+      sel.el('.loginTemplate').classList.remove('open')
+      sel.el('.signinTemplate').classList.add('open')
+    })
   }
 }

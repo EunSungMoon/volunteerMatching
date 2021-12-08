@@ -62,7 +62,7 @@ export default {
       let reg = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
 
       if (emailVal.match(reg) !== null) {
-        location.href = `signin.html`
+        location.href = `signin.html`;
       }
       else {
         console.log('error');

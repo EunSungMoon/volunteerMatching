@@ -25,10 +25,10 @@
     padding: 40px;
     border-radius: 7px;
 
-    form { 
+    form {
       margin: 0 auto;
-      
-      p{
+
+      p {
         margin-bottom: 5px;
       }
 
@@ -38,7 +38,7 @@
 
       .input-box {
         margin-bottom: 24px;
-        width: 312px;
+        width: 425px;
         height: 48px;
         border: 1px solid #f4f4f5;
         border-radius: 7px;
@@ -52,11 +52,30 @@
           transition: background-color 5000s ease-in-out 0s;
         }
       }
+      .nickName {
+        width: 318px;
+      }
+      .confirm {
+        margin-left: 10px;
+        background: #01c3bc;
+        border: none;
+        color: #fff;
+        width: 90px;
+        height: 48px;
+        border-radius: 7px;
+
+        &:hover {
+          background: #00afa9;
+        }
+      }
+      .confirm-complete {
+        display: none;
+      }
     }
 
     .join-complete {
       margin: 0 auto;
-      width: 228px;
+      width: 200px;
       height: 48px;
       border-radius: 7px;
       border: none;
@@ -66,6 +85,12 @@
       &:hover {
         background: #00afa9;
       }
+    }
+    .need-helper {
+      margin-left: 20px;
+    }
+    input[name = "join"] {
+      margin-left: 5px;
     }
   }
 }

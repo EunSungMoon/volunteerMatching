@@ -9,6 +9,7 @@ export default {
   event() {
     this.checkEvt('.need-helper', this.addClass)
     this.checkEvt('.volunteer', this.removeClass)
+    this.confirmRepetition()
     // this.belongingCheckFunc()
   },
 
@@ -21,8 +22,11 @@ export default {
           <form>
             <p class = "email-text">이메일</p>
             <input name = "email" type = "text" class = "input-box emailValue" placeholder = "이메일주소를 적어주세요.">
+            <p class = "nickName-text">별명</p>
+            <input name = "nickName" type = "text" class = "input-box nickName" placeholder = "별명을 적어주세요.">
+            <button class = "confirm confirm-repetition">중복확인</button>
+            <button class = "confirm confirm-complete ">확인 완료</button>
             <p class = "reason-for-joining">가입이유</p>
-            
             <label class = "volunteer"><input type = "radio" name = "join" value = "volunteer" checked>봉사활동을 하고 싶어요</label>
             <label class = "need-helper"><input type = "radio" name = "join" value = "need-helper">봉사자의 도움이 필요해요</label>
           </form>
@@ -47,7 +51,7 @@ export default {
     sel.el(className).addEventListener('click', funcName)
   },
 
-  
+
   addClass() {
     sel.el('.belongWrap').classList.add('show');
   },
@@ -55,4 +59,21 @@ export default {
   removeClass() {
     sel.el('.belongWrap').classList.remove('show')
   },
+
+
+  //별명을 안적었을 시 -> 별명을 입력하세요
+  //별명이 사용가능하면 -> 사용가능한 아이디 & 확인완료 버튼 등장
+  //중복되었을 시 -> 이미 존재하는 아이디 입니다. 
+  confirmRepetition() { 
+    sel.el('.confirm-repetition').addEventListener('click', function (e) {
+
+      if (sel.el('.nickName').value === null) {
+        alert('별명을 입력하세요.')
+      } 
+      else {
+        alert('사용 가능한 아이디 입니다.')
+      }
+      // alert('이미 존재하는 아이디 입니다.')
+    })
+  }
 }
