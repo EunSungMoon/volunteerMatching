@@ -8,7 +8,10 @@ export default {
   mainTemplate() {
     let template = `
       <div class = "container">
-      <h2 class = "h2">게시판</h2>
+      <div class = "titleWrap">
+        <h2 class = "h2">게시판</h2>
+        <button class = "writing-btn">글쓰기</button>
+      </div>
         <section class = "container">
           <ol class = "contentWrap row"></ol>
         </section>

@@ -1,0 +1,17 @@
+@mixin display($effect) {
+  display: flex;
+  align-items: center;
+  justify-content: $effect;
+}
+
+@mixin btn($color, $width, $height, $hover-color) {
+  background: $color;
+  border-radius: 5px;
+  border: none;
+  width: $width;
+  height: $height;
+  color: #fff;
+  &:hover {
+    background: $hover-color;
+  }
+}

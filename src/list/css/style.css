@@ -5,22 +5,6 @@
           flex: none;
 }
 
-body {
-  margin: 0;
-  background: #f8f9fc;
-}
-
-body .container-fluid {
-  padding: 0;
-}
-
-body .container-fluid #header {
-  border-bottom: 1px solid #e7eaf1;
-  background: #fff;
-  padding: 13px 30px 0;
-  height: 80px;
-}
-
 /*********************************************************************
 
 list 디자인
@@ -30,10 +14,36 @@ list 디자인
   margin-top: 50px;
 }
 
-#main .h2 {
-  margin-bottom: 30px;
+#main .titleWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main .titleWrap .h2 {
   text-align: center;
   font-weight: bold;
+  width: 1200px;
+  padding-left: 69px;
+}
+
+#main .titleWrap .writing-btn {
+  background: #01c3bc;
+  border-radius: 5px;
+  border: none;
+  width: 70px;
+  height: 35px;
+  color: #fff;
+}
+
+#main .titleWrap .writing-btn:hover {
+  background: #00afa9;
 }
 
 #main .contentWrap {
@@ -108,6 +118,9 @@ list 디자인
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .h2 {
+    width: 552px !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -121,6 +134,22 @@ list 디자인
 header 디자인
 
 *********************************************************************/
+body {
+  margin: 0;
+  background: #f8f9fc;
+}
+
+body .container-fluid {
+  padding: 0;
+}
+
+body .container-fluid #header {
+  border-bottom: 1px solid #e7eaf1;
+  background: #fff;
+  padding: 13px 30px 0;
+  height: 80px;
+}
+
 .headerInner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -404,6 +433,16 @@ header 디자인
 
 /*********************************************************************
 
+게시글 모달 디자인
+
+*********************************************************************/
+.contentModal {
+  width: 700px;
+  height: 550px;
+}
+
+/*********************************************************************
+
 회원가입 페이지 디자인
 
 *********************************************************************/
@@ -476,11 +515,11 @@ header 디자인
 #signIn-main section form .confirm {
   margin-left: 10px;
   background: #01c3bc;
+  border-radius: 5px;
   border: none;
-  color: #fff;
   width: 90px;
   height: 48px;
-  border-radius: 7px;
+  color: #fff;
 }
 
 #signIn-main section form .confirm:hover {
@@ -510,5 +549,5 @@ header 디자인
 }
 
 #signIn-main section input[name="join"] {
-  margin-left: 5px;
+  margin-right: 5px;
 }

@@ -3,6 +3,20 @@
 header 디자인
 
 *********************************************************************/
+body {
+  margin: 0;
+  background: #f8f9fc;
+
+  .container-fluid {
+    padding: 0;
+    #header {
+      border-bottom: 1px solid #e7eaf1;
+      background: #fff;
+      padding: 13px 30px 0;
+      height: 80px;
+    }
+  }
+}
 
 .headerInner {
   @include display(center);
@@ -46,10 +60,10 @@ header 디자인
     margin-left: auto;
     .login {
       margin-right: 10px;
-      @include btn(#01c3bc, 70px, #00afa9);
+      @include btn(#01c3bc, 70px, 30px, #00afa9);
     }
     .signIn {
-      @include btn(#ff7867, 80px, #ff6d5a);
+      @include btn(#ff7867, 80px, 30px, #ff6d5a);
     }
   }
 }
