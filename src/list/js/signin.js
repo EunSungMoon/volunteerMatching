@@ -34,7 +34,7 @@ export default {
         </section>
       </div>
       `
-    sel.el('#signIn-main').insertAdjacentHTML('afterbegin', template)
+    sel.el('#signin-main').insertAdjacentHTML('afterbegin', template)
   },
 
   belongingCheck() {

@@ -42,7 +42,7 @@ list 디자인
         a {
           display: flex;
           flex-direction: column;
-          span {
+          .listTitle {
             font-size: 20px;
             font-weight: 600;
           }

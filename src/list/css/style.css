@@ -81,7 +81,7 @@ list 디자인
           flex-direction: column;
 }
 
-#main .contentWrap li .listContent a span {
+#main .contentWrap li .listContent a .listTitle {
   font-size: 20px;
   font-weight: 600;
 }
@@ -306,7 +306,7 @@ body .container-fluid #header {
 }
 
 .modalForm .modalContent .closeBtn:hover {
-  background: #e7ebed;
+  background: #F1F3FB;
   border-radius: 5px;
 }
 
@@ -340,8 +340,8 @@ body .container-fluid #header {
 }
 
 .modalForm .modalContent .text-input {
-  border: 1px solid #f4f4f5;
-  background-color: #f4f4f5;
+  border: 1px solid #F1F3FB;
+  background-color: #F1F3FB;
   padding: 0 16px;
   font-size: 14px;
 }
@@ -402,7 +402,7 @@ body .container-fluid #header {
 }
 
 .loginModal .signin .signin-btn:hover {
-  background-color: #e7ebed;
+  background-color: #F1F3FB;
   border: 2px solid #00afa9;
   color: #00afa9;
 }
@@ -436,9 +436,80 @@ body .container-fluid #header {
 게시글 모달 디자인
 
 *********************************************************************/
-.contentModal {
+.articleModal {
   width: 700px;
   height: 550px;
+}
+
+.articleModal .article-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.articleModal .article-header .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.articleModal .article-header .profile p {
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+.articleModal .article-header .btnWrap .article-btn {
+  border: 2px solid #e7eaf1;
+  border-radius: 5px;
+  background: #fff;
+  width: 95px;
+  height: 32px;
+  color: #6a7684;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.articleModal .article-header .btnWrap .article-btn:hover {
+  background: #e7eaf1;
+}
+
+.articleModal .article-content {
+  margin-top: 20px;
+}
+
+.articleModal .article-content .articleTitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.articleModal .article-content p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.bi-pencil:before, .bi-chat-dots:before {
+  color: #6a7684;
+  font-weight: bold !important;
+  padding-right: 5px;
+}
+
+.bi-person-circle:before {
+  font-size: 40px;
 }
 
 /*********************************************************************
@@ -454,17 +525,17 @@ body .container-fluid #header {
   display: none;
 }
 
-#signIn-main {
+#signin-main {
   margin-top: 50px;
 }
 
-#signIn-main .h2 {
+#signin-main .h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: bold;
 }
 
-#signIn-main section {
+#signin-main section {
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -477,19 +548,19 @@ body .container-fluid #header {
   border-radius: 7px;
 }
 
-#signIn-main section form {
+#signin-main section form {
   margin: 0 auto;
 }
 
-#signIn-main section form p {
+#signin-main section form p {
   margin-bottom: 5px;
 }
 
-#signIn-main section form label {
+#signin-main section form label {
   margin-bottom: 24px;
 }
 
-#signIn-main section form .input-box {
+#signin-main section form .input-box {
   margin-bottom: 24px;
   width: 425px;
   height: 48px;
@@ -499,20 +570,20 @@ body .container-fluid #header {
   padding-left: 10px;
 }
 
-#signIn-main section form .input-box:focus {
+#signin-main section form .input-box:focus {
   outline: 2px solid #01c3bc;
 }
 
-#signIn-main section form .input-box:-webkit-autofill {
+#signin-main section form .input-box:-webkit-autofill {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-#signIn-main section form .nickName {
+#signin-main section form .nickName {
   width: 318px;
 }
 
-#signIn-main section form .confirm {
+#signin-main section form .confirm {
   margin-left: 10px;
   background: #01c3bc;
   border-radius: 5px;
@@ -522,15 +593,15 @@ body .container-fluid #header {
   color: #fff;
 }
 
-#signIn-main section form .confirm:hover {
+#signin-main section form .confirm:hover {
   background: #00afa9;
 }
 
-#signIn-main section form .confirm-complete {
+#signin-main section form .confirm-complete {
   display: none;
 }
 
-#signIn-main section .join-complete {
+#signin-main section .join-complete {
   margin: 0 auto;
   width: 200px;
   height: 48px;
@@ -540,14 +611,14 @@ body .container-fluid #header {
   color: #fff;
 }
 
-#signIn-main section .join-complete:hover {
+#signin-main section .join-complete:hover {
   background: #00afa9;
 }
 
-#signIn-main section .need-helper {
+#signin-main section .need-helper {
   margin-left: 20px;
 }
 
-#signIn-main section input[name="join"] {
+#signin-main section input[name="join"] {
   margin-right: 5px;
 }

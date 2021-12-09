@@ -29,7 +29,7 @@
       color: #01c3bc;
 
       &:hover {
-        background-color: #e7ebed;
+        background-color: #F1F3FB;
         border: 2px solid #00afa9;
         color: #00afa9;
       }
@@ -64,7 +64,63 @@
 게시글 모달 디자인
 
 *********************************************************************/
-.contentModal{
+.articleModal{
   width: 700px;
   height: 550px;
+
+  .article-header {
+    @include display(space-between);
+    margin-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9ecef;
+
+    .profile {
+      @include display(center);
+
+      p {
+        margin-bottom: 0;
+        margin-left: 10px;
+      }
+    }
+    .btnWrap {
+      .article-btn {
+        border: 2px solid #e7eaf1;
+        border-radius: 5px;
+        background: #fff;
+        width: 95px;
+        height: 32px;
+        color: #6a7684;
+        font-size: 13px;
+        font-weight: 600;
+        &:hover {
+          background: #e7eaf1;
+        }
+      }
+    }
+  }
+  .article-content {
+    margin-top: 20px;
+    .articleTitle {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    p {
+      margin: 0;
+      font-size: 15px;
+    }
+  }
+}
+
+.bi-pencil, .bi-chat-dots {
+  &:before {
+    color: #6a7684;
+    font-weight: bold !important;
+    padding-right: 5px;
+  }
+}
+
+.bi-person-circle {
+  &:before {
+    font-size: 40px;
+  }
 }
