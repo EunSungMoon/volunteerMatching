@@ -82,21 +82,21 @@
       margin-bottom: 0;
     }
   }
-  // .arcticle-content {
-  // }
   .article-content {
-    margin-top: 20px;
+    margin-top: 10px;
     min-height: 360px;
-    p {
-      margin: 0;
-      font-size: 15px;
+    .article-detail {
+      margin-top: 10px;
+      p {
+        margin: 0;
+        font-size: 15px;
+      }
     }
+
   }
   .article-footer {
     @include display(space-between);
-    margin-top: 10px;
-    position: absolute;
-    top: 476px;
+    margin-top: 20px;
 
     .profile {
       @include display(center);
@@ -121,8 +121,19 @@
   }
 }
 
-.bi-person-circle {
+.bi-person-fill {
   &:before {
     font-size: 40px;
+  }
+}
+
+table {
+  tr {
+    font-size: 14px;
+    border-bottom: 1px solid #F2F3F5;
+    height: 50px;
+    .subject {
+      text-align: center;
+    }
   }
 }

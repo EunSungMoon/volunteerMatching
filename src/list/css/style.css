@@ -72,16 +72,9 @@ list 디자인
 }
 
 #main .titleWrap .writing-btn {
-  background: #01c3bc;
-  border-radius: 5px;
-  border: none;
   width: 70px;
   height: 35px;
-  color: #fff;
-}
-
-#main .titleWrap .writing-btn:hover {
-  background: #00afa9;
+  font-weight: bold;
 }
 
 #main .contentWrap {
@@ -89,7 +82,15 @@ list 디자인
   padding: 0;
 }
 
-#main .contentWrap li {
+#main .contentWrap .list {
+  padding: 25px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 628px;
   border: none;
   border-radius: 16px;
@@ -100,46 +101,51 @@ list 디자인
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
-#main .contentWrap li:hover {
+#main .contentWrap .list:hover {
   -webkit-transform: translateY(-4px);
           transform: translateY(-4px);
 }
 
-#main .contentWrap li .listContent {
-  padding: 20px 10px;
-}
-
-#main .contentWrap li .listContent a {
+#main .contentWrap .list .listTitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#main .contentWrap li .listContent a .listTitle {
+#main .contentWrap .list .listTitle .h3 {
   font-size: 20px;
   font-weight: 600;
 }
 
-#main .contentWrap li .listContent a p {
-  margin: 0;
-  font-size: 15px;
-}
-
-#main .contentWrap li .listContent a .apply-state {
+#main .contentWrap .list .listTitle .apply-state {
   border-radius: 5px;
   width: 90px;
   height: 32px;
   line-height: 32px;
   text-align: center;
-  margin-top: 5px;
-  margin-left: 85%;
   color: #fff;
   font-weight: bold;
   font-size: 17px;
+  margin-bottom: 0;
+}
+
+#main .contentWrap .list .listContent p {
+  margin: 0;
+  font-size: 15px;
+}
+
+#main .contentWrap .list .listContent .bi {
+  padding-right: 10px;
+}
+
+#main .contentWrap .list .listContent .date {
+  margin-top: 10px;
 }
 
 .apply-ing {
@@ -158,12 +164,6 @@ list 디자인
   }
   .titleWrap .h2 {
     width: 552px !important;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .apply-state {
-    margin-left: 82% !important;
   }
 }
 
@@ -482,11 +482,15 @@ body .container-fluid #header {
 }
 
 .articleModal .article-content {
-  margin-top: 20px;
+  margin-top: 10px;
   min-height: 360px;
 }
 
-.articleModal .article-content p {
+.articleModal .article-content .article-detail {
+  margin-top: 10px;
+}
+
+.articleModal .article-content .article-detail p {
   margin: 0;
   font-size: 15px;
 }
@@ -501,9 +505,7 @@ body .container-fluid #header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 10px;
-  position: absolute;
-  top: 476px;
+  margin-top: 20px;
 }
 
 .articleModal .article-footer .profile {
@@ -534,8 +536,18 @@ body .container-fluid #header {
   padding-right: 5px;
 }
 
-.bi-person-circle:before {
+.bi-person-fill:before {
   font-size: 40px;
+}
+
+table tr {
+  font-size: 14px;
+  border-bottom: 1px solid #F2F3F5;
+  height: 50px;
+}
+
+table tr .subject {
+  text-align: center;
 }
 
 /*********************************************************************
