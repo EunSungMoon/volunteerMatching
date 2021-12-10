@@ -80,8 +80,10 @@ list 디자인
   .contentWrap {
     justify-content: center;
   }
-  .h2 {
-    width: 552px !important;
+  .titleWrap {
+    .h2 {
+      width: 552px !important;
+    }
   }
 }
 @media screen and (max-width: 768px) {

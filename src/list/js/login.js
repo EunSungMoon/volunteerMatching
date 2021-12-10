@@ -58,7 +58,7 @@ export default {
   },
 
   inputNullCheck() {
-    if (!sel.el('input[name="id"]').value || !sel.el('input[name ="password"]').value) {
+    if (sel.el('input[name="id"]').value == '' || sel.el('input[name ="password"]').value == '') {
       alert('이메일 또는 비밀번호를 다시 한번 확인해주세요.')
     }
   },

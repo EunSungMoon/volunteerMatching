@@ -24,8 +24,8 @@ export default {
             <input name = "email" type = "text" class = "input-box emailValue" placeholder = "이메일주소를 적어주세요.">
             <p class = "nickName-text">별명</p>
             <input name = "nickName" type = "text" class = "input-box nickName" placeholder = "별명을 적어주세요.">
-            <button class = "confirm confirm-repetition">중복확인</button>
-            <button class = "confirm confirm-complete ">확인 완료</button>
+            <button type = "button" class = "confirm confirm-repetition">중복확인</button>
+            <button type = "button" class = "confirm confirm-complete ">확인 완료</button>
             <p class = "reason-for-joining">가입이유</p>
             <label class = "volunteer"><input type = "radio" name = "join" value = "volunteer" checked>봉사활동을 하고 싶어요</label>
             <label class = "need-helper"><input type = "radio" name = "join" value = "need-helper">봉사자의 도움이 필요해요</label>

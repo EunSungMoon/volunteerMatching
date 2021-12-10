@@ -1,4 +1,42 @@
 @charset "UTF-8";
+.borderBtn {
+  border: 2px solid #e7eaf1;
+  border-radius: 5px;
+  background: #fff;
+  width: 95px;
+  height: 32px;
+  color: #6a7684;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.borderBtn:hover {
+  background: #e7eaf1;
+}
+
+.long-btn {
+  width: 312px;
+  height: 48px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+}
+
+.text-input {
+  border: 1px solid #F1F3FB;
+  background-color: #F1F3FB;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.text-input:focus {
+  outline: 2px solid #01c3bc;
+}
+
+.text-input:-webkit-autofill {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 .flexNone {
   -webkit-box-flex: 0;
       -ms-flex: none;
@@ -118,7 +156,7 @@ list 디자인
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .h2 {
+  .titleWrap .h2 {
     width: 552px !important;
   }
 }
@@ -332,29 +370,6 @@ body .container-fluid #header {
   font-weight: bold;
 }
 
-.modalForm .modalContent .long-btn {
-  width: 312px;
-  height: 48px;
-  margin-bottom: 12px;
-  border-radius: 5px;
-}
-
-.modalForm .modalContent .text-input {
-  border: 1px solid #F1F3FB;
-  background-color: #F1F3FB;
-  padding: 0 16px;
-  font-size: 14px;
-}
-
-.modalForm .modalContent .text-input:focus {
-  outline: 2px solid #01c3bc;
-}
-
-.modalForm .modalContent .text-input:-webkit-autofill {
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
 .modalForm .modalContent .green-btn {
   background-color: #01c3bc;
   color: #fff;
@@ -402,7 +417,7 @@ body .container-fluid #header {
 }
 
 .loginModal .signin .signin-btn:hover {
-  background-color: #F1F3FB;
+  background-color: #f1f3fb;
   border: 2px solid #00afa9;
   color: #00afa9;
 }
@@ -438,7 +453,7 @@ body .container-fluid #header {
 *********************************************************************/
 .articleModal {
   width: 700px;
-  height: 550px;
+  min-height: 550px;
 }
 
 .articleModal .article-header {
@@ -451,12 +466,47 @@ body .container-fluid #header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 10px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: 1px solid #e7eaf1;
+  margin-top: 10px;
 }
 
-.articleModal .article-header .profile {
+.articleModal .article-header .articleTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.articleModal .article-header .createdDate {
+  margin-bottom: 0;
+}
+
+.articleModal .article-content {
+  margin-top: 20px;
+  min-height: 360px;
+}
+
+.articleModal .article-content p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.articleModal .article-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+  position: absolute;
+  top: 476px;
+}
+
+.articleModal .article-footer .profile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -468,41 +518,17 @@ body .container-fluid #header {
           justify-content: center;
 }
 
-.articleModal .article-header .profile p {
+.articleModal .article-footer .profile p {
   margin-bottom: 0;
   margin-left: 10px;
 }
 
-.articleModal .article-header .btnWrap .article-btn {
-  border: 2px solid #e7eaf1;
-  border-radius: 5px;
-  background: #fff;
-  width: 95px;
-  height: 32px;
-  color: #6a7684;
-  font-size: 13px;
-  font-weight: 600;
+.articleModal .article-footer .btnWrap {
+  margin-left: 335px;
 }
 
-.articleModal .article-header .btnWrap .article-btn:hover {
-  background: #e7eaf1;
-}
-
-.articleModal .article-content {
-  margin-top: 20px;
-}
-
-.articleModal .article-content .articleTitle {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.articleModal .article-content p {
-  margin: 0;
-  font-size: 15px;
-}
-
-.bi-pencil:before, .bi-chat-dots:before {
+.bi-pencil:before,
+.bi-chat-dots:before {
   color: #6a7684;
   font-weight: bold !important;
   padding-right: 5px;
@@ -621,4 +647,39 @@ body .container-fluid #header {
 
 #signin-main section input[name="join"] {
   margin-right: 5px;
+}
+
+#passwordCheck-main .formWrap {
+  margin-top: 50px;
+}
+
+#passwordCheck-main .formWrap form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#passwordCheck-main .formWrap form p {
+  margin-bottom: 0;
+  margin-right: 20px;
+}
+
+#passwordCheck-main .formWrap form .long-btn {
+  width: 200px;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+#passwordCheck-main .formWrap form .text-input:focus {
+  outline: 2px solid #e7eaf1;
+}
+
+#passwordCheck-main .formWrap form .borderBtn {
+  width: 60px;
 }

@@ -1,4 +1,4 @@
-@import 'modalCommon';
+@import "modalCommon";
 /*********************************************************************
 
 로그인 모달 디자인
@@ -29,7 +29,7 @@
       color: #01c3bc;
 
       &:hover {
-        background-color: #F1F3FB;
+        background-color: #f1f3fb;
         border: 2px solid #00afa9;
         color: #00afa9;
       }
@@ -42,7 +42,7 @@
 회원가입 모달 디자인
 
 *********************************************************************/
-.signinModal{
+.signinModal {
   width: 360px;
   height: 380px;
 
@@ -64,15 +64,39 @@
 게시글 모달 디자인
 
 *********************************************************************/
-.articleModal{
+.articleModal {
   width: 700px;
-  height: 550px;
-
+  min-height: 550px;
   .article-header {
     @include display(space-between);
-    margin-top: 10px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #e9ecef;
+    border-bottom: 1px solid #e7eaf1;
+    margin-top: 10px;
+
+    .articleTitle {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    .createdDate {
+      margin-bottom: 0;
+    }
+  }
+  // .arcticle-content {
+  // }
+  .article-content {
+    margin-top: 20px;
+    min-height: 360px;
+    p {
+      margin: 0;
+      font-size: 15px;
+    }
+  }
+  .article-footer {
+    @include display(space-between);
+    margin-top: 10px;
+    position: absolute;
+    top: 476px;
 
     .profile {
       @include display(center);
@@ -83,35 +107,13 @@
       }
     }
     .btnWrap {
-      .article-btn {
-        border: 2px solid #e7eaf1;
-        border-radius: 5px;
-        background: #fff;
-        width: 95px;
-        height: 32px;
-        color: #6a7684;
-        font-size: 13px;
-        font-weight: 600;
-        &:hover {
-          background: #e7eaf1;
-        }
-      }
-    }
-  }
-  .article-content {
-    margin-top: 20px;
-    .articleTitle {
-      font-size: 20px;
-      font-weight: 600;
-    }
-    p {
-      margin: 0;
-      font-size: 15px;
+      margin-left: 335px;
     }
   }
 }
 
-.bi-pencil, .bi-chat-dots {
+.bi-pencil,
+.bi-chat-dots {
   &:before {
     color: #6a7684;
     font-weight: bold !important;
