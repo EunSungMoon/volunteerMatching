@@ -3,6 +3,11 @@ export default {
   init() {
     this.mainTemplate()
     this.listTemplate()
+    this.event()
+  },
+  event() {
+    this.writeBtnEvent()
+    this.importJson()
   },
 
   mainTemplate() {
@@ -60,5 +65,21 @@ export default {
       </li>
     `
     sel.el('.contentWrap').insertAdjacentHTML('afterbegin', template)
+  },
+
+  writeBtnEvent() {
+    sel.el('.writing-btn').addEventListener('click', function () {
+      location.href=`articleForm.html`
+    })
+  },
+
+  importJson() {
+    fetch('http://15.164.62.156:8888/list/?format=json')
+      .then(function (response) {
+        return response.json()
+      })
+      .then(function (myJson) {
+        console.log(JSON.stringify(myJson));
+      })
   }
 }

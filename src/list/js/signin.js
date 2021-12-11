@@ -18,12 +18,12 @@ export default {
     let template = `
       <div class = "mainInner container">
         <h2 class = "h2">회원가입</h2>
-        <section>
+        <section class = "section">
           <form>
             <p class = "email-text">이메일</p>
-            <input name = "email" type = "text" class = "input-box emailValue" placeholder = "이메일주소를 적어주세요.">
+            <input name = "email" type = "text" class = "text-input signin-input emailValue" placeholder = "이메일주소를 적어주세요.">
             <p class = "nickName-text">별명</p>
-            <input name = "nickName" type = "text" class = "input-box nickName" placeholder = "별명을 적어주세요.">
+            <input name = "nickName" type = "text" class = "text-input nickName" placeholder = "별명을 적어주세요.">
             <button type = "button" class = "confirm confirm-repetition">중복확인</button>
             <button type = "button" class = "confirm confirm-complete ">확인 완료</button>
             <p class = "reason-for-joining">가입이유</p>
@@ -41,7 +41,7 @@ export default {
     let template = `
       <div class = "belongWrap">
         <p class = "belong">'소속' 또는 '기관'을 적어주세요.</p>
-        <input name = "belong" type = "text" class = "input-box" placeholder = "소속 병원 또는 기관을 적어주세요.">
+        <input name = "belong" type = "text" class = "text-input signin-input" placeholder = "소속 병원 또는 기관을 적어주세요.">
       </div>
       `
     sel.el('form').insertAdjacentHTML('beforeend', template)

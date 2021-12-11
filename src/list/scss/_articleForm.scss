@@ -1,0 +1,24 @@
+
+#article-main {
+  margin-top: 50px;
+  .titleWrap{
+    @include display(center);
+    margin-bottom: 30px;
+
+    .h2 {
+      text-align: center;
+      font-weight: bold;
+      width: 525px;
+      padding-left: 69px;
+    }
+  }
+  .section {
+    width: 628px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  td{
+    padding: 10px 0;
+  }
+}

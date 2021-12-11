@@ -18,13 +18,7 @@
     font-weight: bold;
   }
 
-  section {
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    border-radius: 7px;
-
+  .section {
     form {
       margin: 0 auto;
 
@@ -32,33 +26,25 @@
         margin-bottom: 5px;
       }
 
-      label {
-        margin-bottom: 24px;
-      }
-
-      .input-box {
+      .signin-input {
         margin-bottom: 24px;
         width: 425px;
         height: 48px;
-        border: 1px solid #f4f4f5;
         border-radius: 7px;
-        background: #f4f4f5;
-        padding-left: 10px;
+      }
 
-        &:focus {
-          outline: 2px solid #01c3bc;
-        }
-        &:-webkit-autofill {
-          transition: background-color 5000s ease-in-out 0s;
-        }
+      label {
+        margin-bottom: 24px;
       }
       .nickName {
         width: 318px;
+        height: 48px;
+        border-radius: 7px;
+        margin-bottom: 24px;
       }
       .confirm {
         margin-left: 10px;
-        @include btn (#01c3bc, 90px, 48px, #00afa9);
-
+        @include btn(#01c3bc, 90px, 48px, #00afa9);
       }
       .confirm-complete {
         display: none;
@@ -81,7 +67,7 @@
     .need-helper {
       margin-left: 20px;
     }
-    input[name = "join"] {
+    input[name="join"] {
       margin-right: 5px;
     }
   }

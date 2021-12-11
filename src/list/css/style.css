@@ -19,13 +19,13 @@
   height: 48px;
   margin-bottom: 12px;
   border-radius: 5px;
+  font-size: 14px;
 }
 
 .text-input {
   border: 1px solid #F1F3FB;
   background-color: #F1F3FB;
   padding: 0 16px;
-  font-size: 14px;
 }
 
 .text-input:focus {
@@ -35,6 +35,19 @@
 .text-input:-webkit-autofill {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
+}
+
+.section {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px;
+  border-radius: 7px;
 }
 
 .flexNone {
@@ -72,8 +85,9 @@ list 디자인
 }
 
 #main .titleWrap .writing-btn {
-  width: 70px;
-  height: 35px;
+  width: 80px;
+  height: 40px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -163,7 +177,7 @@ list 디자인
             justify-content: center;
   }
   .titleWrap .h2 {
-    width: 552px !important;
+    width: 540px !important;
   }
 }
 
@@ -573,55 +587,33 @@ table tr .subject {
   font-weight: bold;
 }
 
-#signin-main section {
-  background: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 40px;
-  border-radius: 7px;
-}
-
-#signin-main section form {
+#signin-main .section form {
   margin: 0 auto;
 }
 
-#signin-main section form p {
+#signin-main .section form p {
   margin-bottom: 5px;
 }
 
-#signin-main section form label {
-  margin-bottom: 24px;
-}
-
-#signin-main section form .input-box {
+#signin-main .section form .signin-input {
   margin-bottom: 24px;
   width: 425px;
   height: 48px;
-  border: 1px solid #f4f4f5;
   border-radius: 7px;
-  background: #f4f4f5;
-  padding-left: 10px;
 }
 
-#signin-main section form .input-box:focus {
-  outline: 2px solid #01c3bc;
+#signin-main .section form label {
+  margin-bottom: 24px;
 }
 
-#signin-main section form .input-box:-webkit-autofill {
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
-#signin-main section form .nickName {
+#signin-main .section form .nickName {
   width: 318px;
+  height: 48px;
+  border-radius: 7px;
+  margin-bottom: 24px;
 }
 
-#signin-main section form .confirm {
+#signin-main .section form .confirm {
   margin-left: 10px;
   background: #01c3bc;
   border-radius: 5px;
@@ -631,15 +623,15 @@ table tr .subject {
   color: #fff;
 }
 
-#signin-main section form .confirm:hover {
+#signin-main .section form .confirm:hover {
   background: #00afa9;
 }
 
-#signin-main section form .confirm-complete {
+#signin-main .section form .confirm-complete {
   display: none;
 }
 
-#signin-main section .join-complete {
+#signin-main .section .join-complete {
   margin: 0 auto;
   width: 200px;
   height: 48px;
@@ -649,15 +641,15 @@ table tr .subject {
   color: #fff;
 }
 
-#signin-main section .join-complete:hover {
+#signin-main .section .join-complete:hover {
   background: #00afa9;
 }
 
-#signin-main section .need-helper {
+#signin-main .section .need-helper {
   margin-left: 20px;
 }
 
-#signin-main section input[name="join"] {
+#signin-main .section input[name="join"] {
   margin-right: 5px;
 }
 
@@ -694,4 +686,38 @@ table tr .subject {
 
 #passwordCheck-main .formWrap form .borderBtn {
   width: 60px;
+}
+
+#article-main {
+  margin-top: 50px;
+}
+
+#article-main .titleWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+#article-main .titleWrap .h2 {
+  text-align: center;
+  font-weight: bold;
+  width: 525px;
+  padding-left: 69px;
+}
+
+#article-main .section {
+  width: 628px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+#article-main td {
+  padding: 10px 0;
 }
