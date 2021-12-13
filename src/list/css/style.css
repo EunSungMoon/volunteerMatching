@@ -747,3 +747,18 @@ table tr .subject {
 #article-main #article-detail:focus {
   outline: 2px solid #01c3bc;
 }
+
+#article-main .article-password {
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+}
+
+#article-main .article-password:focus {
+  outline: 2px solid #01c3bc;
+}
+
+#article-main .article-password:-webkit-autofill {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}

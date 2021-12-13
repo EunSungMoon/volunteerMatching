@@ -9,7 +9,7 @@ export default {
   },
 
   event() {
-
+    this.postArticle()
   },
 
   articleFormTemplate() {
@@ -17,7 +17,7 @@ export default {
       <div class = "container">
         <div class = "titleWrap">
           <h2 class = "h2">봉사 모집 등록</h2>
-          <button class = "borderBtn">등록하기</button>
+          <button class = "borderBtn postBtn">등록하기</button>
         </div>
         <section class = "section">
           <table>
@@ -41,7 +41,7 @@ export default {
               <tr>
                 <td>봉사 분야</td>
                 <td>
-                  <select id = "part" class = "article-form">
+                  <select id = "part">
                     <option value = "hair">헤어</option>
                     <option value = "skin">피부</option>
                     <option value = "nail">네일</option>
@@ -60,6 +60,10 @@ export default {
                 <td>상세내용</td>
                 <td><textarea id = "article-detail" placeholder = "상세내용"></textarea></td>
               </tr>
+              <tr>
+                <td>비밀번호 설정</td>
+                <td><input type = "password" class = "article-password"></td>
+              </tr>
             </tbody>
           </table>
         </section>
@@ -76,5 +80,13 @@ export default {
       `
       sel.el('.people-number').insertAdjacentHTML('beforeend', template)
     }
+  },
+
+  postArticle() {
+    sel.el('.postBtn').addEventListener('click', function(e) {
+      if(sel.el('.article-password').value=='') {
+        alert('비밀번호를 설정해주세요.')
+      }
+    })
   }
 }

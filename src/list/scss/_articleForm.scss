@@ -40,4 +40,16 @@
       outline: 2px solid #01c3bc;
     }
   }
+  .article-password {
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+
+    &:focus {
+      outline: 2px solid #01c3bc;
+    }
+    &:-webkit-autofill {
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
 }
