@@ -1,7 +1,6 @@
-
 #article-main {
   margin-top: 50px;
-  .titleWrap{
+  .titleWrap {
     @include display(center);
     margin-bottom: 30px;
 
@@ -18,7 +17,27 @@
     margin-bottom: 30px;
   }
 
-  td{
+  td {
     padding: 10px 0;
+  }
+  .title-input {
+    width: 425px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    &:focus {
+      outline: 2px solid #01c3bc;
+    }
+    &:-webkit-autofill {
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+  #article-detail {
+    width: 425px;
+    border-radius: 5px;
+    border: none;
+    &:focus {
+      outline: 2px solid #01c3bc;
+    }
   }
 }

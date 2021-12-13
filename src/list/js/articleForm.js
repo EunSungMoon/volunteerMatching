@@ -28,7 +28,7 @@ export default {
             <tbody>
               <tr>
                 <td>글 제목</td>
-                <td><input></td>
+                <td><input type = "text" class = "article-form title-input" placeholder = "제목을 입력해주세요."></td>
               </tr>
               <tr>
                 <td>봉사 일</td>
@@ -41,7 +41,7 @@ export default {
               <tr>
                 <td>봉사 분야</td>
                 <td>
-                  <select id = "part">
+                  <select id = "part" class = "article-form">
                     <option value = "hair">헤어</option>
                     <option value = "skin">피부</option>
                     <option value = "nail">네일</option>
@@ -58,7 +58,7 @@ export default {
               </tr>
               <tr>
                 <td>상세내용</td>
-                <td>상세내용 들어갈 자리 길게~~</td>
+                <td><textarea id = "article-detail" placeholder = "상세내용"></textarea></td>
               </tr>
             </tbody>
           </table>
