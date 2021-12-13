@@ -1,0 +1,24 @@
+#profile-main {
+  margin-top: 30px;
+  .h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .profile {
+    text-align: center;
+  }
+  .bi-person-circle {
+    &::before {
+      font-size: 70px;
+    }
+  }
+  table { 
+    margin: 0 auto;
+
+    td {
+      text-align: left;
+      padding: 10px 20px;
+    }
+  }
+}

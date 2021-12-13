@@ -7,7 +7,6 @@ export default {
   },
   event() {
     this.loginEvent('.title', 'list')
-    this.loginEvent('.title', 'list')
   },
 
   headerTemplate() {
@@ -18,7 +17,7 @@ export default {
         <ol class = "flexNone">
           <li ><a href = "list.html">게시판</a></li>
           <li><a href = "">채팅</a></li>
-          <li><a href = "">프로필</a></li>
+          <li><a href = "profile.html">프로필</a></li>
         </ol>
       </nav>
       <div class = "btnWrap">

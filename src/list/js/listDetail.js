@@ -49,19 +49,19 @@ export default {
           </colgroup>
           <tbody>
             <tr>
-              <td class = "subject">봉사 일</td>
+              <th class = "subject">봉사 일</th>
               <td>2021.12.10</td>
             </tr>
             <tr>
-              <td class = "subject">인원수</td>
+              <th class = "subject">인원수</th>
               <td>1명</td>
             </tr>
             <tr>
-              <td class = "subject">분야</td>
+              <th class = "subject">분야</th>
               <td>미용봉사(커트)</td>
             </tr>
             <tr>
-              <td class = "subject">장소</td>
+              <th class = "subject">장소</th>
               <td>서울시 강남구 개포동 123번지</td>
             </tr>
           </tbody>
