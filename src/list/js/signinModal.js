@@ -1,4 +1,4 @@
-import { sel } from "../../common.js";
+import { sel, func } from "../../common.js";
 
 export default {
   init() {
@@ -7,8 +7,8 @@ export default {
   },
 
   event() {
-    this.btnEvent('.signIn ', this.addClass)
-    this.btnEvent('.close-signin-btn', this.removeClass)
+    func.addClassEvt('.signIn', '.signinTemplate')
+    func.removeClassEvt('.close-signin-btn', '.signinTemplate')
     this.escEvent()
     this.startEmail()
   },
@@ -36,22 +36,10 @@ export default {
     sel.el('.loginTemplate').insertAdjacentHTML('afterend', template)
   },
 
-  addClass() {
-    sel.el('.signinTemplate').classList.add('open');
-  },
-
-  removeClass() {
-    sel.el('.signinTemplate').classList.remove('open')
-  },
-
-  btnEvent(buttonClass, funcName) {
-    sel.el(buttonClass).addEventListener('click', funcName)
-  },
-
   escEvent() {
     window.addEventListener('keyup', e => {
       if (sel.el('.signinTemplate').classList.contains('open') && e.key === 'Escape') {
-        this.removeClass()
+        func.removeClass('.articleModal')
       }
     })
   },

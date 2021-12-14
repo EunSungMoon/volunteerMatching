@@ -1,4 +1,4 @@
-import { sel } from "../../common.js";
+import { sel, func } from "../../common.js";
 
 export default {
   init() {
@@ -7,8 +7,9 @@ export default {
   },
 
   event() {
-    this.btnEvent('.login', this.addClass)
-    this.btnEvent('.closeBtn', this.removeClass)
+    func.addClassEvt('.login', '.loginTemplate')
+    func.removeClassEvt('.closeBtn', '.loginTemplate')
+    // this.btnEvent('.closeBtn', this.removeClass)
     this.escEvent()
     this.moveToSingn()
     this.loginBtnEvt()
@@ -37,22 +38,24 @@ export default {
     sel.el('#footer').insertAdjacentHTML('afterend', template)
   },
 
-  addClass() {
-    sel.el('.loginTemplate').classList.add('open');
-  },
+  // addClass() {
+  //   sel.el('.loginTemplate').classList.add('open');
+  // },
 
-  removeClass() {
-    sel.el('.loginTemplate').classList.remove('open')
-  },
+  // removeClass() {
+  //   sel.el('.loginTemplate').classList.remove('open')
+  // },
 
-  btnEvent(buttonClass, funcName) {
-    sel.el(buttonClass).addEventListener('click', funcName)
-  },
+  // btnEvent(buttonClass, funcName) {
+  //   sel.el(buttonClass).addEventListener('click', function() {
+
+  //   })
+  // },
 
   escEvent() {
     window.addEventListener('keyup', e => {
       if (sel.el('.loginTemplate').classList.contains('open') && e.key === 'Escape') {
-        this.removeClass()
+        func.removeClass('.loginTemplate')
       }
     })
   },
@@ -69,8 +72,8 @@ export default {
 
   moveToSingn() {
     sel.el('.signin-btn').addEventListener('click', function () {
-      sel.el('.loginTemplate').classList.remove('open')
-      sel.el('.signinTemplate').classList.add('open')
+      func.removeClass('.loginTemplate')
+      func.addClass('.signinTemplate')
     })
   }
 }

@@ -1,4 +1,4 @@
-import { sel } from "../../common.js";
+import { sel, func } from "../../common.js";
 
 export default {
   init() {

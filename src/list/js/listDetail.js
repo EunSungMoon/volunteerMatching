@@ -1,4 +1,4 @@
-import { sel } from "../../common.js";
+import { sel, func } from "../../common.js";
 
 export default {
   init() {
@@ -7,8 +7,8 @@ export default {
     this.event()
   },
   event() {
-    this.btnEvent('.article-close-btn', this.removeClass)
     this.listEvent()
+    func.removeClassEvt('.article-close-btn', '.articleTemplate')
     this.escEvent()
     this.editBtnEvent()
   },
@@ -75,31 +75,24 @@ export default {
     sel.el('.article-close-btn').insertAdjacentHTML('afterend', template)
   },
 
-  addClass() {
-    sel.el('.articleTemplate').classList.add('open');
-  },
-
-  removeClass() {
-    sel.el('.articleTemplate').classList.remove('open')
-  },
-
-  btnEvent(buttonClass, funcName) {
-    sel.el(buttonClass).addEventListener('click', funcName)
-  },
-
   escEvent() {
     window.addEventListener('keyup', e => {
       if (sel.el('.articleTemplate').classList.contains('open') && e.key === 'Escape') {
-        this.removeClass()
+        func.removeClass('.articleTemplate')
       }
     })
   },
 
   listEvent() {
-    let lists = sel.elAll('.list')
-    for (const list of lists) {
-      list.addEventListener('click', this.addClass)
-    }
+    // let lists = sel.el('.list')
+    // for (const list of lists) {
+    //   // list.addEventListener('click', this.addClass)
+    //   // list.addEventListener('click', function(e) {
+
+    //   // })
+    //   console.log(lists);
+    // }
+    // console.log(sel.el('.list'));
   },
 
   editBtnEvent() {
