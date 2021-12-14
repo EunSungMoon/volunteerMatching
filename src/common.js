@@ -1,4 +1,4 @@
-export { sel, func }
+export { sel, func, com }
 
 let sel = {
   el: selector => document.querySelector(selector),
@@ -19,4 +19,11 @@ let func = {
       sel.el(selector).classList.remove('open')
     })
   }
+}
+
+let com = {
+  getList() {
+    const response = fetch('http://15.164.62.156:8888/list/?format=json')
+    return response.then(res => res.json())
+  },
 }
